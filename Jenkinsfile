@@ -18,7 +18,7 @@ node {
      sh '''
      pwd 
      ls -alhR
-     mvn deploy:deploy-file -DgroupId=com.example.maven-project -DartifactId=maven-project -Dversion=1.0.0 -DgeneratePom=true -Dpackaging=jar -DrepositoryId=nexus -Durl=http://nexus:8081/repository/abhinav/ -Dfile=server/target/server.jar
+     mvn deploy:deploy-file -DgroupId=com.example.maven-project -DartifactId=maven-project -Dversion=1.0.0-${BUILD_NUMBER} -DgeneratePom=true -Dpackaging=jar -DrepositoryId=nexus -Durl=http://nexus:8081/repository/abhinav/ -Dfile=server/target/server.jar
     '''
     }
 

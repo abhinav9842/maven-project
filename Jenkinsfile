@@ -6,6 +6,7 @@ node {
 
     }
     stage('maven install') {
+        echo 'maven install'
         sh '''pwd
             mvn install'''
     }

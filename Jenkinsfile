@@ -1,6 +1,9 @@
 #!/usr/bin/env groovy
 node {
     stage('Checkout from Git') {
+        properties([
+    buildDiscarder(logRotator(numToKeepStr: '3')),
+])
         echo 'Cloning the repo'
         git credentialsId: 'git-id', url: 'https://github.com/abhinav9842/maven-project'
 

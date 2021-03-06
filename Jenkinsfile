@@ -8,7 +8,7 @@ node {
     stage('maven install') {
         echo 'maven install'
         sh '''pwd
-            cd maven-project
+            ls -alh
             mvn install'''
     }
 

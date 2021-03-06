@@ -10,6 +10,7 @@ node {
         sh '''pwd
             ls -alh
             mvn install'''
+        junit 'maven-project/server/target/surefire-reports/*.xml'
     }
 
 } 
